@@ -1,6 +1,6 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "m2collective/laravel-blade-directives",
+  "name": "m2collective/laravel-blade-directive",
   "keywords": [
     "m2collective"
   ],
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "M2Collective\\BladeDirectives\\": "src/"
+      "M2Collective\\BladeDirective\\": "src/"
     }
   },
   "authors": [
@@ -21,7 +21,7 @@
       "role": "Developer"
     }
   ],
-  "homepage": "https://github.com/m2collective/laravel-blade-directives",
+  "homepage": "https://github.com/m2collective/laravel-blade-directive",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
