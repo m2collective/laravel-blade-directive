@@ -5,7 +5,7 @@ namespace M2Collective\BladeDirective\Types;
 
 use M2Collective\BladeDirective\OpeningBladeDirective;
 
-abstract class DisplayBladeDirective implements OpeningBladeDirective
+abstract class StringBladeDirective implements OpeningBladeDirective
 {
 
 }
