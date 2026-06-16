@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace M2Collective\BladeDirective\Contracts\Handlers;
+namespace M2Collective\BladeDirective\Contracts;
 
-use M2Collective\BladeDirective\Contracts\BladeDirective;
+use M2Collective\BladeDirective\BladeDirective;
 
 interface ClosingHandler extends BladeDirective
 {

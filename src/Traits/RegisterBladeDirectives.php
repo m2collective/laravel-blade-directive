@@ -4,10 +4,10 @@ declare(strict_types=1);
 namespace M2Collective\BladeDirective\Traits;
 
 use Illuminate\Support\Facades\Blade;
-use M2Collective\BladeDirective\Contracts\BladeDirective;
-use M2Collective\BladeDirective\Contracts\Handlers\ClosingHandler;
-use M2Collective\BladeDirective\Contracts\Handlers\LogicalHandler;
-use M2Collective\BladeDirective\Contracts\Handlers\OpeningHandler;
+use M2Collective\BladeDirective\BladeDirective;
+use M2Collective\BladeDirective\Contracts\ClosingHandler;
+use M2Collective\BladeDirective\Contracts\LogicalHandler;
+use M2Collective\BladeDirective\Contracts\OpeningHandler;
 
 trait RegisterBladeDirectives
 {
