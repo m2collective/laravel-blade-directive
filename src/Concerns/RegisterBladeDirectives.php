@@ -6,7 +6,7 @@ namespace M2Collective\BladeDirective\Concerns;
 use Illuminate\Support\Facades\Blade;
 use M2Collective\BladeDirective\BladeDirective;
 use M2Collective\BladeDirective\ClosingBladeDirective;
-use M2Collective\BladeDirective\LogicalBladeDirective;
+use M2Collective\BladeDirective\ElseBladeDirective;
 use M2Collective\BladeDirective\OpeningBladeDirective;
 
 trait RegisterBladeDirectives
@@ -34,8 +34,8 @@ trait RegisterBladeDirectives
             Blade::directive($directive->openingTag(), [$directive, 'openingHandler']);
         }
 
-        if($directive instanceof LogicalBladeDirective) {
-            Blade::directive($directive->logicalTag(), [$directive, 'logicalHandler']);
+        if($directive instanceof ElseBladeDirective) {
+            Blade::directive($directive->elseTag(), [$directive, 'elseHandler']);
         }
 
         if($directive instanceof ClosingBladeDirective) {
