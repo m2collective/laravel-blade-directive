@@ -5,7 +5,7 @@ namespace M2Collective\BladeDirective;
 
 use M2Collective\BladeDirective\Contracts\Handlers\OpeningHandler;
 
-abstract class DisplayDirective implements OpeningHandler
+abstract class DisplayBladeDirective implements OpeningHandler
 {
 
 }

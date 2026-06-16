@@ -2,7 +2,9 @@
   "$schema": "https://getcomposer.org/schema.json",
   "name": "m2collective/laravel-blade-directive",
   "keywords": [
-    "m2collective"
+    "laravel",
+    "blade",
+    "directive"
   ],
   "license": "MIT",
   "require": {

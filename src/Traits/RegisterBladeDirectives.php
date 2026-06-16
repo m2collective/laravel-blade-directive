@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace M2Collective\BladeDirective\Traits;
 
 use Illuminate\Support\Facades\Blade;
-use M2Collective\BladeDirective\Contracts\Directive;
+use M2Collective\BladeDirective\Contracts\BladeDirective;
 use M2Collective\BladeDirective\Contracts\Handlers\ClosingHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\LogicalHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\OpeningHandler;
@@ -28,7 +28,7 @@ trait RegisterDirectives
      * @param Directive $directive
      * @return void
      */
-    private function registerDirective(Directive $directive) : void
+    private function registerDirective(BladeDirective $directive) : void
     {
         if($directive instanceof OpeningHandler) {
             Blade::directive($directive->openingTag(), [$directive, 'openingRender']);

@@ -7,7 +7,7 @@ use M2Collective\BladeDirective\Contracts\Handlers\ClosingHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\LogicalHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\OpeningHandler;
 
-abstract class BooleanDirective implements ClosingHandler, LogicalHandler, OpeningHandler
+abstract class BooleanBladeDirective implements ClosingHandler, LogicalHandler, OpeningHandler
 {
 
 }
