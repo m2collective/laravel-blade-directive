@@ -9,7 +9,7 @@ use M2Collective\BladeDirective\Contracts\Handlers\ClosingHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\LogicalHandler;
 use M2Collective\BladeDirective\Contracts\Handlers\OpeningHandler;
 
-trait RegisterDirectives
+trait RegisterBladeDirectives
 {
     /**
      * @param array $directives
@@ -25,7 +25,7 @@ trait RegisterDirectives
     }
 
     /**
-     * @param Directive $directive
+     * @param BladeDirective $directive
      * @return void
      */
     private function registerDirective(BladeDirective $directive) : void
