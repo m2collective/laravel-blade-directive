@@ -4,10 +4,10 @@ declare(strict_types=1);
 namespace M2Collective\BladeDirective\Concerns;
 
 use Illuminate\Support\Facades\Blade;
-use M2Collective\BladeDirective\BladeDirective;
-use M2Collective\BladeDirective\ClosingBladeDirective;
-use M2Collective\BladeDirective\ElseBladeDirective;
-use M2Collective\BladeDirective\OpeningBladeDirective;
+use M2Collective\BladeDirective\Directive;
+use M2Collective\BladeDirective\Handlers\ClosingHandler;
+use M2Collective\BladeDirective\Handlers\ElseHandler;
+use M2Collective\BladeDirective\Handlers\OpeningHandler;
 
 trait RegisterDirectives
 {
@@ -25,21 +25,21 @@ trait RegisterDirectives
     }
 
     /**
-     * @param BladeDirective $directive
+     * @param Directive $directive
      * @return void
      */
-    private function registerDirective(BladeDirective $directive) : void
+    private function registerDirective(Directive $directive) : void
     {
-        if($directive instanceof OpeningBladeDirective) {
-            Blade::directive($directive->openingTag(), [$directive, 'openingHandler']);
+        if($directive instanceof OpeningHandler) {
+            Blade::directive($directive->openingTag(), [$directive, 'openingRender']);
         }
 
-        if($directive instanceof ElseBladeDirective) {
-            Blade::directive($directive->elseTag(), [$directive, 'elseHandler']);
+        if($directive instanceof ElseHandler) {
+            Blade::directive($directive->elseTag(), [$directive, 'elseRender']);
         }
 
-        if($directive instanceof ClosingBladeDirective) {
-            Blade::directive($directive->closingTag(), [$directive, 'closingHandler']);
+        if($directive instanceof ClosingHandler) {
+            Blade::directive($directive->closingTag(), [$directive, 'closingRender']);
         }
     }
 }
