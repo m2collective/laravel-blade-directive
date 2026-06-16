@@ -15,11 +15,11 @@ trait RegisterBladeDirectives
      * @param array $directives
      * @return void
      */
-    private function registerDirectives(array $directives) : void
+    private function registerBladeDirectives(array $directives) : void
     {
         if($directives !== []) {
             foreach ($directives as $directive) {
-                $this->registerDirective($directive);
+                $this->registerBladeDirective($directive);
             }
         }
     }
@@ -28,7 +28,7 @@ trait RegisterBladeDirectives
      * @param BladeDirective $directive
      * @return void
      */
-    private function registerDirective(BladeDirective $directive) : void
+    private function registerBladeDirective(BladeDirective $directive) : void
     {
         if($directive instanceof OpeningHandler) {
             Blade::directive($directive->openingTag(), [$directive, 'openingRender']);
