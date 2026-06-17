@@ -105,6 +105,28 @@ final class Example implements DefaultBladeDirective
 }
 ```
 
+### Registering Blade Directives
+
+```php
+use M2Collective\BladeDirective\Concerns\RegisterBladeDirectives;
+
+final class ExampleServiceProvider extends ServiceProvider
+{
+    use RegisterBladeDirectives;
+    
+    /**
+     * @return void
+     */
+    public function boot(): void
+    {
+        $this->registerBladeDirectives([
+            new ExampleDirective(),
+            //...
+        ]);
+    }
+}
+```
+
 ## License
 
 The MIT License (MIT). Please see the [License file](LICENSE.txt) for more information.
