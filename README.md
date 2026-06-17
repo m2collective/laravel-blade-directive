@@ -51,7 +51,7 @@ final class Example implements DefaultBladeDirective
      * @return string
      */
     public function openingTag(): string {
-        return 'isExample';
+        return 'example';
     }
     
     /**
