@@ -1,5 +1,7 @@
 # Blade Directive
 
+This package simplifies and systematizes the creation and registration of user directives.
+
 ![Laravel](https://img.shields.io/badge/laravel-^13.0-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/php-^8.3-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 
@@ -7,11 +9,13 @@ ___
 
 ## Installation
 
-This package can be deployed automatically using Composer:
+You can install the package via composer:
 
 ```shell
 composer require m2collective/laravel-blade-directive
 ```
+
+The package will automatically register itself.
 
 ## Usage
 
@@ -98,4 +102,5 @@ final class Example implements DefaultBladeDirective
 ```
 
 ## License
-The MIT License (MIT). Please see the [license](LICENSE.txt) file for more information.
+
+The MIT License (MIT). Please see the [License file](LICENSE.txt) for more information.
