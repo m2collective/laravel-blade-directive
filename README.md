@@ -19,7 +19,7 @@ The package will automatically register itself.
 
 ## Usage
 
-### Default Blade Directive
+### Default Directive
 
 Creating a simple directive for displaying or formatting incoming arguments.
 
@@ -46,7 +46,7 @@ final class Example implements DefaultBladeDirective
 }
 ```
 
-### Logical Blade Directive
+### Logical Directive
 
 Creating a logical directive that satisfies certain conditions.
 
@@ -105,7 +105,9 @@ final class Example implements DefaultBladeDirective
 }
 ```
 
-### Registering Blade Directives
+### Registering Directives
+
+New directives are registered through the service provider.
 
 ```php
 use M2Collective\BladeDirective\Concerns\RegisterBladeDirectives;
@@ -119,6 +121,12 @@ final class ExampleServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->registerBladeDirective(
+            new ExampleDirective()
+        );
+        
+        // or
+        
         $this->registerBladeDirectives([
             new ExampleDirective(),
             //...
