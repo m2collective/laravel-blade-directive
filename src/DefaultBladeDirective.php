@@ -8,22 +8,11 @@ interface DefaultBladeDirective extends BladeDirective
     /**
      * @return string
      */
-    public function openingTag() : string;
+    public function tag(): string;
 
     /**
      * @param mixed $expression
      * @return string
      */
-    public function openingHandler(mixed $expression) : string;
-
-    /**
-     * @return string
-     */
-    public function closingTag() : string;
-
-    /**
-     * @param mixed $expression
-     * @return string
-     */
-    public function closingHandler(mixed $expression) : string;
+    public function handler(mixed $expression): string;
 }

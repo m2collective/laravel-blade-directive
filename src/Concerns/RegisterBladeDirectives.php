@@ -30,8 +30,7 @@ trait RegisterBladeDirectives
     private function registerBladeDirective(BladeDirective $directive) : void
     {
         if($directive instanceof DefaultBladeDirective) {
-            Blade::directive($directive->openingTag(), [$directive, 'openingHandler']);
-            Blade::directive($directive->closingTag(), [$directive, 'closingHandler']);
+            Blade::directive($directive->tag(), [$directive, 'handler']);
         }
 
         if($directive instanceof LogicalBladeDirective) {

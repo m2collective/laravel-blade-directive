@@ -8,33 +8,33 @@ interface LogicalBladeDirective extends BladeDirective
     /**
      * @return string
      */
-    public function openingTag() : string;
+    public function openingTag(): string;
 
     /**
      * @param mixed $expression
      * @return string
      */
-    public function openingHandler(mixed $expression) : string;
+    public function openingHandler(mixed $expression): string;
 
     /**
      * @return string
      */
-    public function elseTag() : string;
-
-    /**
-     * @param mixed $expression
-     * @return string
-     */
-    public function elseHandler(mixed $expression) : string;
-
-    /**
-     * @return string
-     */
-    public function closingTag() : string;
+    public function elseTag(): string;
 
     /**
      * @param mixed $expression
      * @return string
      */
-    public function closingHandler(mixed $expression) : string;
+    public function elseHandler(mixed $expression): string;
+
+    /**
+     * @return string
+     */
+    public function closingTag(): string;
+
+    /**
+     * @param mixed $expression
+     * @return string
+     */
+    public function closingHandler(mixed $expression): string;
 }
