@@ -19,6 +19,8 @@ The package will automatically register itself.
 
 ## Usage
 
+By installing the package, you can create and register directives in a simpler and more intuitive way.
+
 ### Default Directive
 
 Creating a simple directive for displaying or formatting incoming arguments.
