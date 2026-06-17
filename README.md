@@ -21,6 +21,8 @@ The package will automatically register itself.
 
 ### Default Blade Directive
 
+Creating a simple directive for displaying or formatting incoming arguments.
+
 ```php
 use M2Collective\BladeDirective\DefaultBladeDirective;
 
@@ -45,6 +47,8 @@ final class Example implements DefaultBladeDirective
 ```
 
 ### Logical Blade Directive
+
+Creating a logical directive that satisfies certain conditions.
 
 ```php
 use M2Collective\BladeDirective\LogicalBladeDirective;
