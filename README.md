@@ -96,3 +96,6 @@ final class Example implements DefaultBladeDirective
     }
 }
 ```
+
+## License
+The MIT License (MIT). Please see the [license](LICENSE.txt) file for more information.
