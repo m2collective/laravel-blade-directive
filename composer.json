@@ -1,10 +1,9 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
   "name": "m2collective/laravel-blade-directive",
-  "description": "",
+  "description": "This package simplifies and systematizes the creation and registration of user directives.",
   "keywords": [
     "m2collective",
-    "laravel-blade-directive",
     "laravel",
     "blade",
     "directive"
