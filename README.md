@@ -55,7 +55,7 @@ Creating a logical directive that satisfies certain conditions.
 ```php
 use M2Collective\BladeDirective\LogicalBladeDirective;
 
-final class Example implements DefaultBladeDirective
+final class Example implements LogicalBladeDirective
 {
     /**
      * @return string
